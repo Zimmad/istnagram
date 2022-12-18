@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "66616636005",
+    "project_id": "isntagram-f9ae8",
+    "storage_bucket": "isntagram-f9ae8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66616636005:android:7fbfc6df81aec41d278c8c",
+        "android_client_info": {
+          "package_name": "com.zimmad.istnagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66616636005-vbstc7shbm6c52rec361cl4f10j0rhbc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnNRIsX-v1MOsKJ1mFs8pm4Ur9hFAmx6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66616636005-vbstc7shbm6c52rec361cl4f10j0rhbc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
