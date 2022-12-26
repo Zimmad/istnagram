@@ -17,11 +17,11 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(const MainView());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainView extends StatelessWidget {
+  const MainView({super.key});
 
   // This widget is the root of your application.
   @override
