@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:istnagram/state/auth/backend/authenticator.dart';
+import 'package:istnagram/state/auth/provider/is_logged_in_provider.dart';
+import 'package:istnagram/state/providers/is_loading_provider.dart';
+import 'package:istnagram/views/components/loading/loading_screen.dart';
 import 'firebase_options.dart';
 
 /// extension for log messages. Next time We will be using a Flutter package for log messages.
@@ -37,7 +41,26 @@ class MainView extends StatelessWidget {
         primarySwatch: Colors.blue,
         brightness: Brightness.dark,
       ),
-      home: const MyHomePage(),
+      home: Consumer(
+        builder: (BuildContext context, WidgetRef ref, Widget? child) {
+          ref.listen<bool>(isLoadingProvider, (previous, next) {
+            if (next) {
+              LoadingScreen.instance().show(context: context);
+            } else {
+              LoadingScreen.instance().hide();
+            }
+          });
+          // return const MyHomePage();
+          final isLogedIn = ref.watch<bool>(isLoggedInProvider);
+          if (isLogedIn) {
+            return MyHomePage();
+          } else {
+            return Container(
+              child: Text('this is a dummy login screen'),
+            );
+          }
+        },
+      ),
     );
   }
 }
