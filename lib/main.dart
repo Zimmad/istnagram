@@ -5,6 +5,8 @@ import 'package:istnagram/state/auth/backend/authenticator.dart';
 import 'package:istnagram/state/auth/provider/is_logged_in_provider.dart';
 import 'package:istnagram/state/providers/is_loading_provider.dart';
 import 'package:istnagram/views/components/loading/loading_screen.dart';
+import 'package:istnagram/views/login/login_view.dart';
+import 'package:istnagram/views/main/main_view.dart';
 import 'firebase_options.dart';
 
 /// extension for log messages. Next time We will be using a Flutter package for log messages.
@@ -21,11 +23,11 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MainView());
+  runApp(const MyHomeView());
 }
 
-class MainView extends StatelessWidget {
-  const MainView({super.key});
+class MyHomeView extends StatelessWidget {
+  const MyHomeView({super.key});
 
   // This widget is the root of your application.
   @override
@@ -53,44 +55,11 @@ class MainView extends StatelessWidget {
           // return const MyHomePage();
           final isLogedIn = ref.watch<bool>(isLoggedInProvider);
           if (isLogedIn) {
-            return MyHomePage();
+            return const MainView();
           } else {
-            return Container(
-              child: Text('this is a dummy login screen'),
-            );
+            return const LoginView();
           }
         },
-      ),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Isntagram"),
-      ),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: () async {
-              final result = await Authenticator().loginWithGoogle();
-              result.log();
-            },
-            child: Text('login with Google'),
-          ),
-          TextButton(
-            onPressed: () async {
-              final result = await Authenticator().loginWithFacebook();
-              result.log();
-            },
-            child: Text('login with Facebook'),
-          ),
-        ],
       ),
     );
   }

@@ -1,0 +1,7 @@
+{
+    "editor.lineHeight": 2,
+    "editor.renderLineHighlight": "line",
+    "editor.renderLineHighlightOnlyWhenFocus": false,
+    "editor.scrollBeyondLastLine": true,
+    "zenMode.hideLineNumbers": true
+}
