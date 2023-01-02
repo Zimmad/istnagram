@@ -44,7 +44,7 @@ class UserInfoStorage {
 
         await FirebaseFirestore.instance
                 .collection(FirebaseFieldName.userId)
-                .add(payLoad) // this [add] functin require a [Map] object
+                .add(payLoad) // this [add] function require a [Map] object
             ;
         return true;
       }

@@ -27,7 +27,7 @@ class UserPostsView extends ConsumerWidget {
         data: (data) {
           ///We gets an [Iterable<Post>] from an [AsyncValue<Iterable<Post>>]
           if (data.isEmpty) {
-            return const EmtyContenWithTextAnimationView(
+            return const EmptyContenWithTextAnimationView(
                 text: Strings.youHaveNoPosts);
           } else {
             return PostGridView(posts: data);

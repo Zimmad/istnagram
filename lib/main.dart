@@ -57,7 +57,7 @@ class MyHomeView extends StatelessWidget {
           if (isLogedIn) {
             return const MainView();
           } else {
-            return const LoginView();
+            return const  LoginView();
           }
         },
       ),

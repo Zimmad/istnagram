@@ -12,8 +12,8 @@ import 'package:istnagram/views/components/animations/models/lottie_animation.da
 //       : super(animation: LottieAnimation.empty);
 // }
 
-class EmtyContenWithTextAnimationView extends StatelessWidget {
-  const EmtyContenWithTextAnimationView({super.key, required this.text});
+class EmptyContenWithTextAnimationView extends StatelessWidget {
+  const EmptyContenWithTextAnimationView({super.key, required this.text});
 
   final String text;
   @override

@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:istnagram/state/auth/provider/auth_state_notifier_provider.dart';
+import 'package:istnagram/state/image_uploads/helpers/image_picker_helper.dart';
+import 'package:istnagram/state/image_uploads/models/file_type.dart';
+import 'package:istnagram/state/post_settings/provider/post_setting_provider.dart';
 import 'package:istnagram/views/components/dialog/logout_dialog.dart';
 import 'package:istnagram/views/constants/strings.dart';
 import 'package:istnagram/views/components/dialog/alert_dialog_model.dart';
+import 'package:istnagram/views/create_new_post/create_new_post_view.dart';
 import 'package:istnagram/views/tabs/user_posts/user_posts_view.dart';
 
 /// The view that is displayed to the user when you are logged in
@@ -26,11 +30,46 @@ class _MainViewState extends ConsumerState<MainView> {
           actions: [
             IconButton(
               icon: const FaIcon(FontAwesomeIcons.film),
-              onPressed: () async {},
+              onPressed: () async {
+                final videoFile =
+                    await ImagePickerHelper.pickVideoFromGallery();
+                if (videoFile == null) {
+                  return;
+                }
+                ref.refresh(postSettingProvider);
+                // go to the screen to create a new post
+                if (!mounted) {
+                  return;
+                }
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CreateNewPostView(
+                        fileToPost: videoFile, fileType: FileType.video),
+                  ),
+                );
+              },
             ),
             IconButton(
               icon: const Icon(Icons.add_photo_alternate_outlined),
-              onPressed: () async {},
+              onPressed: () async {
+                final imageFile =
+                    await ImagePickerHelper.pickVideoFromGallery();
+                if (imageFile == null) {
+                  return;
+                }
+                // If the post settings provider is not refreshed, the same settings will be set as default.
+                ref.refresh(postSettingProvider);
+                if (!mounted) {
+                  return;
+                }
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CreateNewPostView(
+                          fileToPost: imageFile, fileType: FileType.image),
+                    ));
+              },
             ),
             IconButton(
               icon: const Icon(Icons.logout),
