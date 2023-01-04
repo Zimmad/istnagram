@@ -4,7 +4,7 @@ import 'package:istnagram/state/posts/providers/user_posts_provider.dart';
 import 'package:istnagram/views/components/animations/empty_content_with_text_animation_view.dart';
 import 'package:istnagram/views/components/animations/error_animation_view.dart';
 import 'package:istnagram/views/components/animations/loading_animation_view.dart';
-import 'package:istnagram/views/components/post/posts_gridview.dart';
+import 'package:istnagram/views/components/post/posts_grid_view.dart';
 import 'package:istnagram/views/constants/strings.dart';
 
 class UserPostsView extends ConsumerWidget {
@@ -17,7 +17,7 @@ class UserPostsView extends ConsumerWidget {
         userPostsProvider); // asyncValue is like a porxy object, that allows you to build various widget dependent on the state of your provider
     return RefreshIndicator(
       onRefresh: () {
-        ref.refresh(userPostsProvider);
+        ref.invalidate(userPostsProvider);
         return Future.delayed(const Duration(seconds: 1));
       },
 

@@ -29,7 +29,7 @@ class DeleteCommentStateNotifier extends StateNotifier<IsLoading> {
     } catch (e) {
       return false;
     } finally {
-      return false;
+      // return false;
     }
   }
 }

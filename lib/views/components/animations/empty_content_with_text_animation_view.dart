@@ -1,10 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:istnagram/views/components/animations/empty_content_animation_view.dart';
-import 'package:istnagram/views/components/animations/lottie_animation_view.dart';
-import 'package:istnagram/views/components/animations/models/lottie_animation.dart';
 
 // class EmtyContenWithTextAnimationView extends LottieAnimationsView {
 //   const EmtyContenWithTextAnimationView(

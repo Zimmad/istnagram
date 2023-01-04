@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:istnagram/state/posts/typedef/models/post.dart';
 import 'package:istnagram/views/components/post/post_thumbnail_view.dart';
+import 'package:istnagram/views/post_detail/post_details_view.dart';
 
 class PostGridView extends StatelessWidget {
   const PostGridView({required this.posts, super.key});
@@ -20,7 +21,14 @@ class PostGridView extends StatelessWidget {
         final post = posts.elementAt(index);
         return PostThumbnailView(
             onTapped: () {
-              // TODO: navigate to the post detail view
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return PostDetailsView(post: post);
+                  },
+                ),
+              );
             },
             post: post);
       },

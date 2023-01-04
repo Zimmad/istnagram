@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart' show immutable;
-
 /// @immutable   ---At the time of weiting this code, the import was not working.
 class Constants {
   static const String accountExistsWithDifferentCredentials =

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DeviderWithMargin extends StatefulWidget {
-  DeviderWithMargin({Key? key}) : super(key: key);
+  const DeviderWithMargin({Key? key}) : super(key: key);
 
   @override
   State<DeviderWithMargin> createState() => _DeviderWithMarginState();

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:istnagram/state/auth/backend/authenticator.dart';
 import 'package:istnagram/state/auth/provider/is_logged_in_provider.dart';
 import 'package:istnagram/state/providers/is_loading_provider.dart';
 import 'package:istnagram/views/components/loading/loading_screen.dart';
@@ -10,11 +9,11 @@ import 'package:istnagram/views/main/main_view.dart';
 import 'firebase_options.dart';
 
 /// extension for log messages. Next time We will be using a Flutter package for log messages.
-import 'dart:developer' as devTools show log;
+import 'dart:developer' as dev_tools show log;
 // const String name = "Romaisa";
 
 extension Log on Object {
-  void log() => devTools.log(toString());
+  void log() => dev_tools.log(toString());
 }
 
 // ...
@@ -57,7 +56,7 @@ class MyHomeView extends StatelessWidget {
           if (isLogedIn) {
             return const MainView();
           } else {
-            return const  LoginView();
+            return const LoginView();
           }
         },
       ),

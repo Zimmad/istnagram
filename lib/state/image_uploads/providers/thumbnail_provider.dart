@@ -26,7 +26,7 @@ final thumbnailProvider =
           imageFormat: ImageFormat.JPEG,
         );
         if (thumb == null) {
-          throw CouldNotBuildThumbnailException();
+          throw const CouldNotBuildThumbnailException();
         } else {
           image = Image.memory(
             thumb,

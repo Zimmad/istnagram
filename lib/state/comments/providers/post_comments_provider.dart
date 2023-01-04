@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:istnagram/state/comments/extensions/comment_sorting_by_request.dart';
-import 'package:istnagram/state/comments/models/Post_comment_request.dart';
+import 'package:istnagram/state/comments/models/comment_post_request.dart';
 import 'package:istnagram/state/comments/models/comment.dart';
 import 'package:istnagram/state/constants/firebase_collection_name.dart';
 import 'package:istnagram/state/constants/firebase_fields_name.dart';

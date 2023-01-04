@@ -1,15 +1,13 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:istnagram/state/auth/provider/user_id_provider.dart';
-import 'package:istnagram/state/comments/models/Post_comment_request.dart';
+import 'package:istnagram/state/comments/models/comment_post_request.dart';
 import 'package:istnagram/state/comments/providers/post_comments_provider.dart';
 import 'package:istnagram/state/comments/providers/send_comment_provider.dart';
 import 'package:istnagram/state/posts/typedef/post_id.dart';
-import 'package:istnagram/views/components/animations/empty_content_animation_view.dart';
+// import 'package:istnagram/views/components/animations/empty_content_animation_view.dart';
 import 'package:istnagram/views/components/animations/empty_content_with_text_animation_view.dart';
 import 'package:istnagram/views/components/animations/error_animation_view.dart';
 import 'package:istnagram/views/components/animations/loading_animation_view.dart';
@@ -72,7 +70,7 @@ class PostCommentsView extends HookConsumerWidget {
                   }
                   return RefreshIndicator(
                     onRefresh: () {
-                      ref.refresh(
+                      ref.invalidate(
                         postCommentsProvider(request.value),
                       );
                       return Future.delayed(

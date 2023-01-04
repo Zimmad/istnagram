@@ -6,7 +6,6 @@ import 'package:istnagram/state/auth/provider/user_id_provider.dart';
 import 'package:istnagram/state/constants/firebase_collection_name.dart';
 import 'package:istnagram/state/constants/firebase_fields_name.dart';
 import 'package:istnagram/state/posts/typedef/models/post_keys.dart';
-import 'package:istnagram/state/posts/typedef/user_id.dart';
 
 import '../typedef/models/post.dart';
 

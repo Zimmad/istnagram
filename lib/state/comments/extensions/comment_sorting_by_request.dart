@@ -1,4 +1,4 @@
-import 'package:istnagram/state/comments/models/Post_comment_request.dart';
+import 'package:istnagram/state/comments/models/comment_post_request.dart';
 import 'package:istnagram/state/comments/models/comment.dart';
 import 'package:istnagram/state/enums/date_sorting.dart';
 

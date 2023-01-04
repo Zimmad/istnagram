@@ -21,7 +21,7 @@ class AuthState {
   /// Creating method to for changing the isLoading flag.
   AuthState copiedWithIsLoading({required bool isLoading}) {
     return AuthState(
-      result: this.result,
+      result: result,
       isLoading: isLoading,
       userId: userId,
     );
@@ -41,6 +41,6 @@ class AuthState {
   int get hashCode => Object.hash(
         result,
         isLoading,
-       userId,
+        userId,
       );
 }

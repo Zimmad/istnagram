@@ -1,7 +1,6 @@
 // This class is not immutable, because it holds of a variable(state) that is not final and private.
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:istnagram/views/components/constants/strings.dart';
 import 'package:istnagram/views/components/loading/loading_screen_constroller.dart';
@@ -57,7 +56,7 @@ class LoadingScreen {
                 ),
                 child: Padding(
                   // by default it takes the entire height
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: SingleChildScrollView(
                     // by defalt it takes the entire height
                     // controller:

@@ -32,7 +32,7 @@ class LoginView extends ConsumerWidget {
                 Strings.welcomeToAppName,
                 style: Theme.of(context).textTheme.displaySmall,
               ),
-              DeviderWithMargin(),
+              const DeviderWithMargin(),
               Text(
                 Strings.logIntoYourAccount,
                 style: Theme.of(context)
@@ -64,7 +64,7 @@ class LoginView extends ConsumerWidget {
                     foregroundColor: AppColors.loginButtonTextColor),
                 child: const GoogleButton(),
               ),
-              DeviderWithMargin(),
+              const DeviderWithMargin(),
               const LoginViewSignupLink(),
             ],
           ),

@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart' show immutable;
 import 'package:istnagram/state/comments/tpedefs/comment_id.dart';
 import 'package:istnagram/state/constants/firebase_fields_name.dart';
@@ -33,7 +32,6 @@ class Comment {
   }
 
   @override
-  // TODO: implement hashCode
   int get hashCode => Object.hashAll([
         id,
         comment,

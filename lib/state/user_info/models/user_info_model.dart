@@ -1,5 +1,4 @@
 import 'dart:collection' show MapView;
-import 'dart:math';
 
 import 'package:flutter/foundation.dart' show immutable;
 import 'package:istnagram/state/constants/firebase_fields_name.dart';

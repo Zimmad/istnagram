@@ -36,7 +36,7 @@ class _MainViewState extends ConsumerState<MainView> {
                 if (videoFile == null) {
                   return;
                 }
-                ref.refresh(postSettingProvider);
+                ref.invalidate(postSettingProvider);
                 // go to the screen to create a new post
                 if (!mounted) {
                   return;
@@ -59,7 +59,7 @@ class _MainViewState extends ConsumerState<MainView> {
                   return;
                 }
                 // If the post settings provider is not refreshed, the same settings will be set as default.
-                ref.refresh(postSettingProvider);
+                ref.invalidate(postSettingProvider);
                 if (!mounted) {
                   return;
                 }
