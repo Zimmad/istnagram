@@ -9,6 +9,7 @@ import 'package:istnagram/views/components/dialog/logout_dialog.dart';
 import 'package:istnagram/views/constants/strings.dart';
 import 'package:istnagram/views/components/dialog/alert_dialog_model.dart';
 import 'package:istnagram/views/create_new_post/create_new_post_view.dart';
+import 'package:istnagram/views/tabs/search/search_view.dart';
 import 'package:istnagram/views/tabs/user_posts/user_posts_view.dart';
 
 /// The view that is displayed to the user when you are logged in
@@ -100,7 +101,7 @@ class _MainViewState extends ConsumerState<MainView> {
         body: const TabBarView(
           children: [
             UserPostsView(),
-            UserPostsView(),
+            SearchView(),
             UserPostsView(),
           ],
         ),
