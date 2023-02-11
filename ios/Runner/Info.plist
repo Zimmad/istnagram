@@ -29,8 +29,8 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb680446646995557</string>
-				<string>com.googleusercontent.apps.66616636005-2mkrh9lktko0igk1ovpos1gfgdo6eh7n</string>
+				<string>provide your own key here</string>
+				<string>com.googleusercontent.apps.provideYourOwnKeyHere</string>
 			</array>
 		</dict>
 	</array>
