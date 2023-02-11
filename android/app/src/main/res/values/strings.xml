@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="facebook_app_id">680446646995557</string>
-    <string name="fb_login_protocol_scheme">fb680446646995557</string>
-    <string name="facebook_client_token">58a4f91f6032dd93669cafe00eeb4fbd</string>
+    <string name="facebook_app_id">facebook app id goes here</string>
+    <string name="fb_login_protocol_scheme">write your own token here </string>
+    <string name="facebook_client_token">token cannot be exposed here</string>
     <string name="app_name">Istnagarm</string>
 </resources>
